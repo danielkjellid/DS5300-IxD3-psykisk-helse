@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <BaseHeader />
-
     <!-- make use of the global components
     notice how its not imported/registered -->
     <BaseTest />

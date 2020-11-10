@@ -1,20 +1,11 @@
 <template>
-  <div id="app" class="max-w-4xl p-6 mx-auto">
-    <div id="nav">
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> -->
-    </div>
+  <div id="app" class="max-w-4xl mx-auto">
+    <BaseHeader />
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
+   @import url('https://rsms.me/inter/inter.css');
+   html { font-family: 'Inter', sans-serif; }
 </style>

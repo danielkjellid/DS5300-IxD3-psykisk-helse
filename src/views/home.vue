@@ -1,19 +1,22 @@
 <template>
   <div class="home max-w-5xl px-5 mx-auto">
-    <BaseInput label="search" hiddenLabel v-model="query" class="pt-10" block :icon="true" />
+    <BaseInput label="search" hiddenLabel v-model="query" class="pt-10" block :icon="true" :placeholder="'Søk etter artikler, temaer...'" />
     <BaseCategoryBtn class="pt-2" />
-    <div class="text-center w-2/3 mx-auto my-10">
-      <h1 class="text-gray-800 font-extrabold text-3xl"> {{title}} </h1>
+    <div class="text-center w-full md:w-2/3 mx-auto my-10">
+      <h1 class="text-gray-800 font-extrabold text-3xl"> Forsiden </h1>
       <p class="text-gray-600 font-normal text-md">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sit earum culpa commodi suscipit! Est!</p>
     </div>
-    <ArticleList :articles="focusArticles" :smallList="false" :smallCard="false" class="pb-10" />
+    <div>
+      <h2 class="text-center text-base font-semibold text-gray-700 pb-3">Fremhevede artikler</h2>
+      <ArticleList :articles="focusArticles" :smallList="false" :smallCard="false" class="pb-10" />
+    </div>
     <div class="flex items-center justify-center w-full h-56 mb-10 bg-gray-200 rounded-lg uppercase">
       Reklame
     </div>
-    <ArticleList :articles="articles" :smallList="true" :smallCard="true" />
+    <ArticleList :articles="articles" :smallList="true" :smallCard="true" class="pb-10" />
     <!-- make use of the global components
     notice how its not imported/registered -->
-   
+    <SubscribeBox class="mb-10"/>
   </div>
   
 </template>
@@ -22,11 +25,13 @@
 <script>
 // @ is an alias to /src
 import ArticleList from '@/components/article-list.vue'
+import SubscribeBox from '@/components/subscribe-box.vue'
 
 export default {
   name: 'Home',
   components: {
-    ArticleList
+    ArticleList,
+    SubscribeBox
   },
   props: {
 
@@ -40,7 +45,7 @@ export default {
                 category: 'Livet',
                 title: 'Opplevde at jeg ble kastet ut',
                 text: 'Flere tidligere pasienter har klaget til Hurdalssjøen Recoverysenter inn til Fylkesmannen for dårlig behandling. Lene K. Apeland er en av klagerne.',
-                authorAvatarUrl: 'https://source.unsplash.com/random',
+                authorAvatarUrl: '../assets/avatar.png',
                 authorName: 'Liz Buer',
                 datePublished: 'Mar 16, 2020',
                 readTime: '6 min'

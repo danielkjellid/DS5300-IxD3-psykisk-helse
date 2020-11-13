@@ -11,6 +11,8 @@
             </router-link>
             <nav class="hidden lg:flex text-sm text-gray-700 font-medium">
               <router-link class="ml-8" to="/">Magasinet</router-link>
+
+              <!-- Non-functional links in p tags -->
               <p class="ml-8">Om bladet</p>
               <p class="ml-8">Innsending</p>
               <p class="ml-8">Rådet for psykisk helse</p>

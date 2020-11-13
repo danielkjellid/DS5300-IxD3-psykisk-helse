@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <BaseHeader />
-    <router-view class="max-w-5xl mx-auto px-5"/>
+    <router-view class="relative" />
   </div>
 </template>
 

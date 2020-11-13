@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <BaseInput class="pt-10"/>
+  <div class="home max-w-5xl px-5 mx-auto">
+    <BaseInput label="search" hiddenLabel v-model="query" class="pt-10" block :icon="true" />
     <BaseCategoryBtn class="pt-2" />
     <div class="text-center w-2/3 mx-auto my-10">
       <h1 class="text-gray-800 font-extrabold text-3xl"> {{title}} </h1>

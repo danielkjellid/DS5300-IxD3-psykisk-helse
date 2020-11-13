@@ -1,0 +1,51 @@
+<template>
+  <div>
+    <img class="lg:block absolute top-0 left-0 right-0 z-10 hidden" :src="require('../assets/art-background.png')" />
+    <div class="flex items-center justify-center max-w-5xl min-h-full px-5 mx-auto">
+      <div class="lg:my-32 z-20 my-20" style="width:420px">
+        <svg class="mx-auto" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.80953 9.0475L9.14286 18.1904L11.0476 19.9999L9.2381 21.8094L1.80953 30.9523L10.9524 23.5237L14.4762 19.9999L10.9524 16.3808L1.80953 9.0475ZM11.4286 15.9046L15.0476 19.4285L16.9524 17.5237L13.4286 13.9046L0.476196 2.95226L11.4286 15.9046ZM19.4905 19.9846L17.5381 21.937L15.5848 19.9846L17.5371 18.0323L19.4905 19.9846ZM11.5238 24.0951L0.476196 36.9523L13.4286 25.9999L16.9524 22.4761L15.0476 20.4761L11.5238 24.0951ZM9.04762 38.1904L18.1905 30.857L20 28.9523L21.8095 30.7618L31.0476 38.1904L23.6191 29.0475L20 25.5237L16.4762 29.0475L9.04762 38.1904ZM14 26.5713L3.04762 39.5237L15.9048 28.5713L19.5238 24.9523L17.6191 23.0475L14 26.5713ZM20.0286 20.5665L21.9819 22.5189L20.0295 24.4723L18.0772 22.5199L20.0286 20.5665ZM20.5714 24.9523L24.0952 28.4761L37.0476 39.5237L26.0952 26.5713L22.4762 23.0475L20.5714 24.9523ZM9.04762 1.80941L18.1905 9.14274L20 11.0475L21.8095 9.23798L30.9524 1.80941L23.5238 10.9523L20 14.4761L16.381 10.9523L9.04762 1.80941ZM13.9048 13.4285L17.5238 16.9523L19.4286 15.0475L15.9048 11.4285L2.95239 0.476074L13.9048 13.4285ZM17.9905 17.5046L19.9448 15.5513L21.8972 17.5037L19.9448 19.4561L17.9905 17.5046ZM24.0952 11.5237L20.4762 15.0475L22.4762 16.9523L26 13.4285L36.9524 0.476074L24.0952 11.5237ZM38.1905 9.0475L30.8572 18.1904L28.9524 19.9999L30.7619 21.8094L38.1905 31.0475L29.0476 23.6189L25.5238 19.9999L29.0476 16.4761L38.1905 9.0475ZM26.5714 13.9999L39.5238 3.0475L28.5714 15.9046L24.9524 19.5237L23.0476 17.5237L26.5714 13.9999ZM22.5133 18.1094L24.4657 20.0618L22.5133 22.0151L20.561 20.0627L22.5133 18.1094ZM24.9524 20.5713L28.4762 24.0951L39.5238 37.0475L26.5714 26.0951L23.0476 22.4761L24.9524 20.5713Z" fill="#161616"/>
+        </svg>
+        <div class="text-center">
+          <h1 class="mt-5 text-3xl font-extrabold text-gray-900">Logg inn på kontoen din</h1>
+          <div class="flex items-center justify-center mt-1 text-sm text-gray-700">
+            Har du ikke en konto? <router-link to="/" class="text-ps-orange ml-1 font-medium">Lag en her</router-link>
+          </div>
+        </div>
+        <div class="mt-6 bg-white rounded shadow">
+          <div class="px-10 py-10">
+            <BaseInput v-model="username" label="E-post" block />
+            <BaseInput v-model="password" class="mt-4" label="Passord" type="password" block />
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center">
+                <label class="inline-flex">
+                  <input type="checkbox" class="form-checkbox text-ps-orange w-5 h-5" checked />
+                  <div class="ml-3 -mt-px text-sm">
+                    <span class="block font-medium text-gray-800">Husk meg</span>
+                  </div>
+                </label>
+              </div>
+              <router-link to="/" class="text-ps-orange ml-1 text-sm font-medium">Glemt passord?</router-link>
+            </div>
+            <div class="mt-4">
+              <BaseButton to="/min-konto" block>
+                Logg inn
+              </BaseButton>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      username: 'testuser@example.com',
+      password: '12345678',
+    }
+  },
+}
+</script>

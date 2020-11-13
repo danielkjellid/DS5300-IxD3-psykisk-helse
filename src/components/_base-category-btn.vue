@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    name: 'BaseCategoryBtn'
+    name: 'BaseCategoryBtn',
 }
 </script>
 

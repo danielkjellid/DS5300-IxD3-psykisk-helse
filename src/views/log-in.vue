@@ -14,8 +14,8 @@
         </div>
         <div class="mt-6 bg-white rounded shadow">
           <div class="px-10 py-10">
-            <BaseInput v-model="username" label="E-post" block />
-            <BaseInput v-model="password" class="mt-4" label="Passord" type="password" block />
+            <BaseInput id="username" v-model="username" label="E-post" block />
+            <BaseInput id="password" v-model="password" class="mt-4" label="Passord" type="password" block />
             <div class="flex items-center justify-between mt-4">
               <div class="flex items-center">
                 <label class="inline-flex">
@@ -41,6 +41,7 @@
 
 <script>
 export default {
+  name: 'LogIn',
   data() {
     return {
       username: 'testuser@example.com',
